@@ -120,3 +120,22 @@ var swiper = new Swiper(".slide-content", {
       },
   },
 });
+
+
+// ==========================================================
+// -- Active Navlink OnScroll
+// ==========================================================
+
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function changeActiveLink() {
+    let index = sections.length;
+
+    while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+    navLinks.forEach((link) => link.classList.remove('active'));
+    navLinks[index].classList.add('active');
+}
+
+window.addEventListener('scroll', changeActiveLink);
