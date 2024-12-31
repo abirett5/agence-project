@@ -203,6 +203,15 @@ nav.navbar {
     z-index: 9999;
 }
 
+nav.navbar .navbar-brand img,
+nav.navbar .navbar-brand svg {
+    height: 42px;
+}
+
+nav.navbar .navbar-brand svg path {
+    transition: all 0.5s ease;
+}
+
 nav.navbar ul {
     display: flex;
     column-gap: 67px;
@@ -231,6 +240,10 @@ nav.navbar.sticky-nav {
     padding: 10px 0;
     color: var(--white);
     background: hsla(0, 0%, 20%, 1);
+}
+
+nav.navbar.sticky-nav .navbar-brand svg path {
+    fill: #fff;
 }
 
 nav.navbar.sticky-nav .nav-menu ul li a {
